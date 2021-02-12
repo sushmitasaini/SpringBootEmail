@@ -8,6 +8,7 @@ import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
+import javax.mail.Transport;
 
 @Service
 public class EmailService {
@@ -30,7 +31,7 @@ public class EmailService {
         properties.put("mail.smtp.host", host);
         properties.put("mail.smtp.port","465");
         properties.put("mail.smtp.ssl.enable","true");
-        properties.put("mail.smt.auth","true");
+        properties.put("mail.smtp.auth","true");
 
         Session session = Session.getInstance(properties, new Authenticator() {
             @Override

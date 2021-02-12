@@ -22,7 +22,7 @@ public class EmailController {
     }
 
     @RequestMapping(value = "/sendemail", method = RequestMethod.POST)
-    public ResponseEntity<?> sendMail(@RequestBody EmailRequest request) { ;
+    public ResponseEntity<?> sendMail(@RequestBody EmailRequest request) {
         System.out.println(request);
         boolean result = this.emailService.sendEmail(request.getSubject(),request.getMessage(), request.getTo());
         try {

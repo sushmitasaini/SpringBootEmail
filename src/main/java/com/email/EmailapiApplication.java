@@ -17,7 +17,7 @@ public class EmailapiApplication {
 
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx = SpringApplication.run(EmailapiApplication.class, args);
-		EnvironmentConfig env = (EnvironmentConfig)ctx.getBean(EnvironmentConfig.class);
+		EnvironmentConfig env = ctx.getBean(EnvironmentConfig.class);
 	}
 
 	@Value("${spring.smtp.username}")
